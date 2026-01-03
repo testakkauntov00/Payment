@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Оплата участия в розыгрыше</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background: #0f172a;
+            font-family: Arial, sans-serif;
+            color: #ffffff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .box {
+            background: #111827;
+            padding: 30px;
+            border-radius: 15px;
+            width: 100%;
+            max-width: 380px;
+            text-align: center;
+            box-shadow: 0 0 25px rgba(0,0,0,0.5);
+        }
+
+        h1 {
+            margin-bottom: 10px;
+        }
+
+        p {
+            font-size: 15px;
+            color: #d1d5db;
+        }
+
+        input {
+            width: 100%;
+            padding: 12px;
+            margin-top: 10px;
+            border-radius: 8px;
+            border: none;
+            outline: none;
+            font-size: 14px;
+        }
+
+        button {
+            margin-top: 20px;
+            width: 100%;
+            padding: 14px;
+            font-size: 16px;
+            font-weight: bold;
+            border-radius: 10px;
+            border: none;
+            background: #22c55e;
+            color: #000;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #16a34a;
+        }
+
+        .price {
+            margin-top: 15px;
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        .note {
+            margin-top: 15px;
+            font-size: 12px;
+            color: #9ca3af;
+        }
+    </style>
+</head>
+<body>
+
+<div class="box">
+    <h1>🎁 Розыгрыш</h1>
+    <p>Введите данные для участия</p>
+
+    <input type="text" id="name" placeholder="Ваше имя" required>
+    <input type="tel" id="phone" placeholder="Телефон" required>
+
+    <div class="price">Стоимость: 1 000 ₸</div>
+
+    <button onclick="pay()">Оплатить участие</button>
+
+    <div class="note">
+        После оплаты вы автоматически участвуете в розыгрыше
+    </div>
+</div>
+
+<script>
+    function pay() {
+        const name = document.getElementById("name").value;
+        const phone = document.getElementById("phone").value;
+
+        if (!name || !phone) {
+            alert("Пожалуйста, заполните все поля");
+            return;
+        }
+
+        // 🔴 ВСТАВЬ СЮДА СВОЮ ССЫЛКУ KASPI PAY
+        window.location.href = "https://kaspi.kz/pay/XXXXXXXX";
+    }
+</script>
+
+</body>
+</html>
